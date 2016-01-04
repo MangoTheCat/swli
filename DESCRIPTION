@@ -1,0 +1,14 @@
+Package: swli
+Title: Star Wars lorem ipsum
+Version: 0.1
+Authors@R: person("Steph", "Locke", email = "slocke@mango-solutions.com", role = c("aut", "cre"))
+Description: A Star Wars lorem ipsum generator based on a JS library.
+Depends:
+    R (>= 3.2.3)
+License: MIT + file LICENSE
+LazyData: true
+Imports:
+    V8
+Suggests:
+    testthat
+RoxygenNote: 5.0.1
