@@ -20,7 +20,7 @@ swli<-function(paragraphs=3,type="e4",src="installed"){
             ,is.character(src)
             ,type %in% c("e4", "e5", "e6", "places","people")
             )
-  ct<-new_context()
+  ct<-V8::new_context()
   jsLib<-ifelse(src=="installed"
                 ,system.file("js","forcem.js", package = "swli")
                 ,"https://raw.githubusercontent.com/scottyg/ForcemJS/master/forcem.js")

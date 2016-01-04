@@ -20,7 +20,7 @@ swli(paragraphs = 3, type = "e4", src = "installed")
 swl Star Wars lorem ipsum vector
 }
 \description{
-A lorem ipsum generator using a Star Wars JS library
+A lorem ipsum generator using a Star Wars JS library.
 
 Based on the forcem javascript library that generates
 Star Wars text from different episodes. The installed

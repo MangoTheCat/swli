@@ -5,5 +5,4 @@
 #' @name swli
 #' @docType package
 #' @importFrom V8 new_context
-#' @importMethodsFrom V8 call source
 NULL
