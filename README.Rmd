@@ -1,0 +1,51 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# Star Wars lorem ipsum generator
+
+Using [ForcemJS](https://github.com/scottyg/ForcemJS), this package produces Star Wars filler text.
+
+```r
+if(!(require(devtools))) install.package("devtools")
+devtools::install_github("MangoTheCat/swli")
+```
+
+## How it works - reference wrappers
+```{r}
+library(swli)
+aNewHope(paragraphs = 1)
+theEmpireStrikesBack(paragraphs = 1)
+returnOfTheJedi(paragraphs = 1)
+places(paragraphs = 1)
+people(paragraphs = 1)
+```
+
+## How it works - root function
+```{r}
+library(swli)
+# Change paragraphs
+swli(paragraphs = 2)
+# Change type of return
+swli(type = "e4")
+# Get an item from each type
+options <- c("e4", "e5", "e6", "places", "people")
+mapply(swli,  type = options,  paragraphs = 1)
+```
+
+## Quirks & Bugs
+Due to the randomisation of paragraphs for return, the original JS auther returns 5 paragraphs when a request for length 0 comes in.
+
+The `window` scope in the original javascript errors when called by V8 so the version locally has this replaced with `global`.

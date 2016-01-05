@@ -1,3 +1,5 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 latestForceJS.R
+^README\.Rmd$
+^README-.*\.png$
