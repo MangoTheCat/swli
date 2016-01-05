@@ -6,18 +6,18 @@
 \alias{swli-package}
 \title{swli}
 \usage{
-swli(paragraphs = 3, type = "e4", src = "installed")
+swli(paragraphs = 3, type = c("e4", "e5", "e6", "places", "people"),
+  src = "installed")
 }
 \arguments{
 \item{paragraphs}{How many paragraphs should be returned}
 
-\item{type}{Provide the episode (3 - 6) or proper noun type
-\code{c("e4", "e5", "e6", "places","people")}}
+\item{type}{Provide the episode (3 - 6) or proper noun type}
 
 \item{src}{Change default value to pull from github}
 }
 \value{
-swl Star Wars lorem ipsum vector
+swli Star Wars lorem ipsum vector
 }
 \description{
 A lorem ipsum generator using a Star Wars JS library.
@@ -28,6 +28,11 @@ Star Wars text from different episodes. The installed
 \code{window} was replaced with \code{global}.
 }
 \details{
-When 0 paragraphs are requested, 5 are returned.
+When 0 paragraphs are requested, 5 are returned as per 
+the code in the JS library.
+}
+\examples{
+swli(paragraphs = 1)
+swli(type = "places")
 }
 

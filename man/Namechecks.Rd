@@ -21,4 +21,8 @@ Star Wars proper nouns
 
 \item \code{places}: Returns place names
 }}
+\examples{
+people(paragraphs = 1)
+places(paragraphs = 1)
+}
 

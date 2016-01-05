@@ -26,4 +26,9 @@ Episode specific lorem ipsum
 
 \item \code{returnOfTheJedi}: Returns Episode 6 content
 }}
+\examples{
+aNewHope(paragraphs = 1)
+theEmpireStrikesBack(paragraphs = 1)
+returnOfTheJedi(paragraphs = 1)
+}
 
