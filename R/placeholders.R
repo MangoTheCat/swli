@@ -4,22 +4,28 @@
 #' 
 #' @export
 #' @describeIn Episodes Returns Episode 4 content
-aNewHope<-function(...){
-  swli(type="e4", ...)
+#' @examples 
+#' aNewHope(paragraphs = 1)
+aNewHope <- function(...){
+  swli(type="e4",  ...)
 }
 
 #' @title theEmpireStrikesBack
 #' @export
 #' @describeIn Episodes Returns Episode 5 content
-theEmpireStrikesBack<-function(...){
-  swli(type="e5", ...)
+#' @examples 
+#' theEmpireStrikesBack(paragraphs = 1)
+theEmpireStrikesBack <- function(...){
+  swli(type="e5",  ...)
 }
 
 #' @title returnOfTheJedi
 #' @export
 #' @describeIn Episodes Returns Episode 6 content
-returnOfTheJedi<-function(...){
-  swli(type="e6", ...)
+#' @examples 
+#' returnOfTheJedi(paragraphs = 1)
+returnOfTheJedi <- function(...){
+  swli(type="e6",  ...)
 }
 
 #' @title people
@@ -27,13 +33,17 @@ returnOfTheJedi<-function(...){
 #' @param ... \code{swli()} parameters
 #' @export
 #' @describeIn Namechecks Returns character names
-people<-function(...){
-  swli(type="people", ...)
+#' @examples 
+#' people(paragraphs = 1)
+people <- function(...){
+  swli(type="people",  ...)
 }
 
 #' @title places
 #' @export
 #' @describeIn Namechecks Returns place names
-places<-function(...){
-  swli(type="places", ...)
+#' @examples 
+#' places(paragraphs = 1)
+places <- function(...){
+  swli(type="places",  ...)
 }
