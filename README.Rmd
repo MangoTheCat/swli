@@ -10,42 +10,64 @@ output:
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "README-"
+  fig.path = "README-",
+  cache.extra = knitr::rand_seed
 )
+options(width = 72)
 ```
 
 # Star Wars lorem ipsum generator
 
-Using [ForcemJS](https://github.com/scottyg/ForcemJS), this package produces Star Wars filler text.
+Using [ForcemJS](https://github.com/scottyg/ForcemJS), this package
+produces Star Wars filler text.
 
 ```r
-if(!(require(devtools))) install.package("devtools")
+if (!(require(devtools))) install.packages("devtools")
 devtools::install_github("MangoTheCat/swli")
 ```
 
-## How it works - reference wrappers
+## How it works — reference wrappers
+
 ```{r}
 library(swli)
-aNewHope(paragraphs = 1)
-theEmpireStrikesBack(paragraphs = 1)
-returnOfTheJedi(paragraphs = 1)
+strwrap(aNewHope(paragraphs = 1))
+strwrap(theEmpireStrikesBack(paragraphs = 1))
+strwrap(returnOfTheJedi(paragraphs = 1))
 places(paragraphs = 1)
 people(paragraphs = 1)
 ```
 
-## How it works - root function
+## How it works — root function
+
 ```{r}
 library(swli)
-# Change paragraphs
-swli(paragraphs = 2)
-# Change type of return
-swli(type = "e4")
-# Get an item from each type
+```
+
+## Change paragraphs
+
+```{r}
+strwrap(swli(paragraphs = 2))
+```
+
+## Change type of return
+
+```{r}
+strwrap(swli(type = "e4"))
+```
+
+## Get an item from each type
+
+```{r}
 options <- c("e4", "e5", "e6", "places", "people")
-mapply(swli,  type = options,  paragraphs = 1)
+lapply(
+  mapply(swli, type = options, paragraphs = 1),
+  strwrap
+)
 ```
 
 ## Quirks & Bugs
-Due to the randomisation of paragraphs for return, the original JS auther returns 5 paragraphs when a request for length 0 comes in.
+Due to the randomisation of paragraphs for return, the original JS auther
+returns 5 paragraphs when a request for length 0 comes in.
 
-The `window` scope in the original javascript errors when called by V8 so the version locally has this replaced with `global`.
+The `window` scope in the original javascript errors when called by V8 so
+the version locally has this replaced with `global`.
